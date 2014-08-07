@@ -50,11 +50,18 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
+"language specific formatting
+autocmd Filetype javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2 | set expandtab
+
 "vim-flake8
 let g:flake8_ignore = "E501,C0110,W0511"
-let g:flake8_max_complexity = 12
+let g:flake8_max_complexity = 15
 let g:flake8_max_line_length = 99
 autocmd BufWritePost *.py call Flake8()
+
+
+"jshint
+let jshint2_save = 1
 
 " Python-mode stuff
 "let g:pymode = 0
