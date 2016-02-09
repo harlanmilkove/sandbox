@@ -35,7 +35,8 @@ set showtabline=2
 set backspace=indent,eol,start
 
 "default statusline
-set statusline=[%n]\ %t
+set statusline=%m[%F]\ %t
+set statusline+=\ %l\:%c
 
 set hlsearch
 map ,n :nohlsearch<CR>
@@ -79,6 +80,8 @@ let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_html_tidy_exec = 'tidy5'
 let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 let g:syntastic_html_tidy_ignore_errors = ['proprietary attribute']
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args = '--max-line-length=99'
 
 "jshint
 "let JSHintUpdateWriteOnly=0
